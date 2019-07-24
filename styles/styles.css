@@ -1,0 +1,112 @@
+h1, h2, h3, h4, h5, p, div {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 50px;
+  background: linear-gradient(167deg, #0c084c 0%, #096386 52%, #00b7a8 100%);
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr;
+  grid-column-gap: 10px;
+}
+body nav a {
+  background-color: #096386;
+  padding: 10px;
+  color: white;
+  display: block;
+  margin: 0 0 5px;
+}
+body nav a:hover {
+  background-color: #0c084c;
+}
+body div.personalInfo, body div.resume {
+  background-color: white;
+  padding: 40px;
+}
+body div.personalInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body div.personalInfo p.position {
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+body div.personalInfo p.description {
+  padding: 20px 0;
+}
+body div.personalInfo div.email {
+  background-color: #096386;
+  padding: 10px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+}
+body div.personalInfo div.email:hover {
+  background-color: #0c084c;
+}
+body div.personalInfo ul.socialMedia {
+  margin: 20px 0;
+  display: flex;
+}
+body div.personalInfo ul.socialMedia li {
+  background-color: #0c084c;
+  color: white;
+  padding: 5px 8px;
+  margin: 0 5px;
+}
+body div.personalInfo ul.socialMedia li:hover {
+  background-color: #096386;
+}
+body div.resume h2 {
+  color: #0c084c;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #0c084c;
+}
+body div.resume div.download {
+  margin: 30px 0;
+}
+body div.resume div.download a {
+  background-color: #0c084c;
+  padding: 10px;
+  color: white;
+}
+body div.resume div.download a:hover {
+  background-color: #096386;
+}
+body div.resume h3 {
+  color: #096386;
+  border-left: 5px solid #096386;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+body div.resume i.fa-university {
+  padding-right: 10px;
+}
+body div.resume div.education {
+  border: 3px double grey;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+body div.resume div.education h4 {
+  padding-bottom: 10px;
+}
+body div.resume div.education h5 {
+  padding-bottom: 10px;
+  border-bottom: solid 1px grey;
+  font-weight: normal;
+  font-style: italic;
+}
+body div.resume div.education p {
+  padding-top: 10px;
+}
+
+/*# sourceMappingURL=styles.css.map */
