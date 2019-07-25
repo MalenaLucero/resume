@@ -59,9 +59,17 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
+        h1{
+            margin: $text-padding 0;
+            span{
+                color: $main-color;
+            }
+        }
         p.position{
             padding-bottom: $text-padding;
             border-bottom: 1px solid black;
+            font-weight: bold;
+            text-align: center;
         }
         p.description{
             padding: $text-padding 0;
@@ -114,10 +122,13 @@ body{
             h4{
                 padding-bottom: $small-text-padding;
             }
+            h4.degreeTranslation{
+                font-weight: normal;
+            }
             h5{
                 padding-bottom: $small-text-padding;
                 border-bottom: solid 1px grey;
-                font-weight: normal;
+                font-weight: bold;
                 font-style: italic;
             }
             p{
