@@ -80,15 +80,25 @@ body div.resume h2 {
   border-bottom: 1px solid #0c084c;
 }
 body div.resume div.download {
-  margin: 30px 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
 }
 body div.resume div.download a {
   background-color: #0c084c;
   padding: 10px;
   color: white;
+  text-align: center;
+  margin-right: 20px;
 }
 body div.resume div.download a:hover {
   background-color: #096386;
+}
+body div.resume div.download a:last-of-type {
+  margin-right: 0;
+}
+body div.resume div.educationBox {
+  margin-top: 20px;
 }
 body div.resume h3 {
   color: #096386;
@@ -109,6 +119,8 @@ body div.resume div.education h4 {
 }
 body div.resume div.education h4.degreeTranslation {
   font-weight: normal;
+  font-size: 14px;
+  padding: 0;
 }
 body div.resume div.education h5 {
   padding-bottom: 10px;
@@ -118,6 +130,14 @@ body div.resume div.education h5 {
 }
 body div.resume div.education p {
   padding-top: 10px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -101,39 +101,61 @@ body{
             border-bottom: 1px solid $dark-color;
         }
         div.download{
-            margin: 30px 0;
+            margin-top: $text-padding;
+            display: flex;
+            flex-direction: row;
             a{
                 @include reverseButton;
+                text-align: center;
+                margin-right: $text-padding;
+                &:last-of-type{
+                    margin-right: 0;
+                }
             }
+
+        }
+        div.educationBox{
+            margin-top: $text-padding;
+            
         }
         h3{
             color: $main-color;
             border-left: 5px solid $main-color;
             padding-left: 10px;
             margin-bottom: $text-padding;
-        }
-        i.fa-university{
-            padding-right: 10px;
-        }
-        div.education{
-            border: 3px double grey;
-            padding: $text-padding;
-            margin-bottom: $text-padding;
-            h4{
-                padding-bottom: $small-text-padding;
             }
-            h4.degreeTranslation{
-                font-weight: normal;
+            i.fa-university{
+                padding-right: 10px;
             }
-            h5{
-                padding-bottom: $small-text-padding;
-                border-bottom: solid 1px grey;
-                font-weight: bold;
-                font-style: italic;
+            div.education{
+                border: 3px double grey;
+                padding: $text-padding;
+                margin-bottom: $text-padding;
+                h4{
+                    padding-bottom: $small-text-padding;
+                }
+                h4.degreeTranslation{
+                    font-weight: normal;
+                    font-size: 14px;
+                    padding: 0;
+                }
+                h5{
+                    padding-bottom: $small-text-padding;
+                    border-bottom: solid 1px grey;
+                    font-weight: bold;
+                    font-style: italic;
+                }
+                p{
+                    padding-top: $small-text-padding;
+                }
             }
-            p{
-                padding-top: $small-text-padding;
-            }
-        }
     }
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
 }
