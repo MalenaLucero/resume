@@ -18,6 +18,36 @@ body {
   grid-column-gap: 10px;
   overflow: hidden;
 }
+@media (max-width: 750px) {
+  body {
+    margin: 5vh 0;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    height: auto;
+    overflow: scroll;
+  }
+}
+body nav div.dropdown {
+  display: none;
+  background-color: #096386;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  body nav div.dropdown {
+    display: block;
+  }
+}
+body nav div.dropdown i {
+  color: #0c084c;
+  font-size: 20px;
+  background-color: #096386;
+  padding: 20px;
+}
 body nav a {
   background-color: #096386;
   padding: 10px;
@@ -28,13 +58,33 @@ body nav a {
 body nav a:hover {
   background-color: #0c084c;
 }
+@media (max-width: 600px) {
+  body nav ul {
+    display: none;
+  }
+}
 body div.resume {
   overflow: scroll;
+}
+@media (max-width: 600px) {
+  body div.resume {
+    overflow: auto;
+  }
 }
 body div.personalInfo, body div.resume {
   background-color: white;
   padding: 40px;
   height: 70vh;
+}
+@media (max-width: 750px) {
+  body div.personalInfo, body div.resume {
+    padding: 20px;
+  }
+}
+@media (max-width: 600px) {
+  body div.personalInfo, body div.resume {
+    height: auto;
+  }
 }
 body div.personalInfo {
   overflow: hidden;
@@ -42,8 +92,14 @@ body div.personalInfo {
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 600px) {
+  body div.personalInfo {
+    overflow: auto;
+  }
+}
 body div.personalInfo h1 {
   margin: 0 0 20px;
+  text-align: center;
 }
 body div.personalInfo h1 span {
   color: #096386;

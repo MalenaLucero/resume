@@ -8,10 +8,14 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="main.js" type="text/Javascript"></script>
 </head>
 <body>
     <nav>
-        <ul>
+        <div class="dropdown" onclick="showMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul id="menu">
             <li><a>HOME</a></li>
             <li><a>EDUCATION</a></li>
             <li><a>LANGUAGES</a></li>

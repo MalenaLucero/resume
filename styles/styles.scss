@@ -4,6 +4,8 @@ $text-color: grey;
 $padding: 40px;
 $text-padding: 20px;
 $small-text-padding: 10px;
+$medium-break: 750px;
+$small-break: 600px;
 
 h1, h2, h3, h4, h5, p, div{
     margin: 0;
@@ -97,28 +99,71 @@ body{
     grid-template-columns: 1fr 3fr 3fr;
     grid-column-gap: 10px;
     overflow: hidden;
+    @media (max-width: $medium-break){
+        margin: 5vh 0;
+    }
+    @media(max-width: $small-break){
+        display: flex;
+        flex-direction: column;
+        margin: $padding;
+        height: auto;
+        overflow: scroll;
+    }
     nav{
+        div.dropdown{
+            display: none;
+            background-color: $main-color;
+            text-align: center;
+            @media (max-width: $small-break){
+                display: block;
+            }
+            i{
+                color: $dark-color;
+                font-size: 20px;
+                background-color: $main-color;
+                padding: $text-padding;
+            }
+        }
         a{
             @include button;
             display: block;
             margin: 0 0 5px;
         }
+        ul{
+           @media(max-width: $small-break){
+            display: none;
+            } 
+        }
+        
     }
     div.resume{
         overflow: scroll;
+        @media(max-width: $small-break){
+            overflow: auto;
+        }
     }
     div.personalInfo, div.resume{
         background-color: white;
         padding: $padding;
         height: 70vh;
+        @media(max-width: $medium-break){
+            padding: $text-padding;
+        }
+        @media(max-width: $small-break){
+            height: auto;
+        }
     }
     div.personalInfo{
         overflow: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media(max-width: $small-break){
+            overflow: auto;
+        }
         h1{
             margin: 0 0 $text-padding;
+            text-align: center;
             span{
                 color: $main-color;
             }
