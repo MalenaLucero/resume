@@ -15,6 +15,15 @@ ul{
     padding: 0;
 }
 
+@mixin simpleButton{
+    text-decoration: none;
+    color: $main-color;
+    font-weight: bold;
+        &:hover{
+            color: $dark-color;
+        }
+}
+
 @mixin button{
     background-color: $main-color;
     padding: 10px;
@@ -33,17 +42,61 @@ ul{
         }
 }
 
-@mixin container{
-    margin: 50px;
+@mixin subtitle{
+    h3{
+        color: $main-color;
+        border-left: 5px solid $main-color;
+        padding-left: 10px;
+        margin-bottom: $text-padding;
+    }
+    i{
+        padding-right: 10px;
+    }
 }
 
+@mixin doubleBorderBox{
+    border: 3px double grey;
+    padding: $text-padding;
+    margin-bottom: $text-padding;
+    h4{
+        padding-bottom: $small-text-padding;
+    }
+    h4.degreeTranslation{
+        font-weight: normal;
+        font-size: 14px;
+        padding: 0;
+    }
+    h5{
+        padding-bottom: $small-text-padding;
+        border-bottom: solid 1px grey;
+        font-weight: bold;
+        font-style: italic;
+    }
+    p{
+        padding-top: $small-text-padding;
+    }
+    @include list()
+}
+
+@mixin list{
+    ul{
+        margin-top: $text-padding;
+        span{
+            color: $main-color;
+        }
+    }
+}
+
+
 body{
+    height: 100vh;
+    margin: 5vh 50px;
     font-family: 'Open Sans', sans-serif;
-    @include container;
     background: linear-gradient(167deg, rgba(12,8,76,1) 0%, rgba(9,99,134,1) 52%, rgba(0,183,168,1) 100%);
     display: grid;
     grid-template-columns: 1fr 3fr 3fr;
     grid-column-gap: 10px;
+    overflow: hidden;
     nav{
         a{
             @include button;
@@ -51,16 +104,21 @@ body{
             margin: 0 0 5px;
         }
     }
+    div.resume{
+        overflow: scroll;
+    }
     div.personalInfo, div.resume{
         background-color: white;
         padding: $padding;
+        height: 70vh;
     }
     div.personalInfo{
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
         h1{
-            margin: $text-padding 0;
+            margin: 0 0 $text-padding;
             span{
                 color: $main-color;
             }
@@ -84,13 +142,8 @@ body{
             margin: $text-padding 0;
             display: flex;
             li{
-                background-color: $dark-color;
                 color: white;
-                padding: 5px 8px;
                 margin: 0 5px;
-                &:hover{
-                    background-color: $main-color;
-                }
             }
         }
     }
@@ -118,37 +171,26 @@ body{
             margin-top: $text-padding;
             
         }
-        h3{
-            color: $main-color;
-            border-left: 5px solid $main-color;
-            padding-left: 10px;
-            margin-bottom: $text-padding;
-            }
-            i.fa-university{
-                padding-right: 10px;
-            }
-            div.education{
-                border: 3px double grey;
-                padding: $text-padding;
-                margin-bottom: $text-padding;
-                h4{
-                    padding-bottom: $small-text-padding;
-                }
-                h4.degreeTranslation{
-                    font-weight: normal;
-                    font-size: 14px;
-                    padding: 0;
-                }
-                h5{
-                    padding-bottom: $small-text-padding;
-                    border-bottom: solid 1px grey;
-                    font-weight: bold;
-                    font-style: italic;
-                }
-                p{
-                    padding-top: $small-text-padding;
-                }
-            }
+        div.subtitle{
+            @include subtitle();
+        }
+        div.education{
+            @include doubleBorderBox();
+        }
+            
+    }
+    div.languages{
+        div.subtitle{
+            @include subtitle();
+        }
+        div.languagesContent{
+            @include doubleBorderBox();
+        }
+    }
+    div.portfolio{
+        a{
+            @include simpleButton();
+        }
     }
 }
 
