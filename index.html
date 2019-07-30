@@ -12,15 +12,15 @@
 </head>
 <body>
     <nav>
-        <div class="dropdown" onclick="showMenu()">
+        <div class="dropdown" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
         </div>
-        <ul id="menu">
-            <li><a>HOME</a></li>
-            <li><a>EDUCATION</a></li>
-            <li><a>LANGUAGES</a></li>
-            <li><a>PORTFOLIO</a></li>
-            <li><a>CONTACT</a></li>
+        <ul id="menu" class="menu">
+            <li><a href="#" onclick="home()">HOME</a></li>
+            <li><a href="#" onclick="education()">EDUCATION</a></li>
+            <li><a href="#" onclick="languages()">LANGUAGES</a></li>
+            <li><a href="#" onclick="portfolio()">PORTFOLIO</a></li>
+            <li><a href="#" onclick="contact()">CONTACT</a></li>
         </ul>
     </nav>
     <!--PERSONAL INFO-->
@@ -44,7 +44,7 @@
             <a href="resume/Malena Lucero (CV) Desarrolladora front-end.pdf" download>Download in Spanish</a> 
         </div>
         <!--EDUCATION-->
-        <div id="educationBox" class="educationBox show">
+        <div id="education" class="educationBox show">
             <div class="subtitle">
                 <h3><i class="fas fa-university"></i>Education</h3>
             </div>
@@ -67,7 +67,7 @@
             </div>
         </div>
         <!--LANGUAGES-->
-        <div class="languages">
+        <div class="languages show" id="languages">
             <div class="subtitle">
                 <h3><i class="fas fa-language"></i>Languages</h3>
             </div>
@@ -92,13 +92,22 @@
             </div>
         </div>
         <!--PORTFOLIO-->
-        <div class="portfolio">
+        <div class="portfolio show" id="portfolio">
             <div class="subtitle">
                 <h3><i class="fas fa-address-book"></i>Portfolio</h3>
             </div>
             <div class="porfolioContent">
-                <p><a href="#" class="button">This</a> ABM webpage</p>
-                <p><a href="#">This</a> to-do list</p>
+                <p><a href="#" class="button">ABM webpage</a></p>
+                <p><a href="#">To-do list</a></p>
+            </div>
+        </div>
+        <!--CONTACT-->
+        <div class="contact show" id="contact">
+            <div class="subtitle">
+                <h3><i class="fas fa-comments"></i>Contact</h3>
+                <div class="contactContent">
+                    <p>tradmalenalucero@gmail.com</p>
+                </div>
             </div>
         </div>
     </div>

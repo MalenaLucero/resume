@@ -8,6 +8,10 @@ ul {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   height: 100vh;
   margin: 5vh 50px;
@@ -31,6 +35,9 @@ body {
     height: auto;
     overflow: scroll;
   }
+}
+body nav {
+  position: relative;
 }
 body nav div.dropdown {
   display: none;
@@ -59,8 +66,20 @@ body nav a:hover {
   background-color: #0c084c;
 }
 @media (max-width: 600px) {
-  body nav ul {
-    display: none;
+  body nav a {
+    text-align: center;
+    margin: 0;
+  }
+}
+body nav ul.menu.open {
+  transform: translate(-100vw);
+}
+@media (max-width: 600px) {
+  body nav ul.menu {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    right: -100vw;
   }
 }
 body div.resume {
@@ -112,6 +131,7 @@ body div.personalInfo p.position {
 }
 body div.personalInfo p.description {
   padding: 20px 0;
+  text-align: center;
 }
 body div.personalInfo div.email {
   background-color: #096386;
@@ -158,6 +178,9 @@ body div.resume div.download a:last-of-type {
 body div.resume div.educationBox {
   margin-top: 20px;
 }
+body div.resume div.subtitle {
+  margin-top: 20px;
+}
 body div.resume div.subtitle h3 {
   color: #096386;
   border-left: 5px solid #096386;
@@ -194,6 +217,9 @@ body div.resume div.education ul {
 }
 body div.resume div.education ul span {
   color: #096386;
+}
+body div.languages div.subtitle {
+  margin-top: 20px;
 }
 body div.languages div.subtitle h3 {
   color: #096386;

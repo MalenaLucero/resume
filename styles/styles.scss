@@ -45,6 +45,7 @@ ul{
 }
 
 @mixin subtitle{
+    margin-top: $text-padding;
     h3{
         color: $main-color;
         border-left: 5px solid $main-color;
@@ -89,6 +90,10 @@ ul{
     }
 }
 
+a{
+    text-decoration: none;
+}
+
 
 body{
     height: 100vh;
@@ -110,6 +115,7 @@ body{
         overflow: scroll;
     }
     nav{
+        position: relative;
         div.dropdown{
             display: none;
             background-color: $main-color;
@@ -128,10 +134,20 @@ body{
             @include button;
             display: block;
             margin: 0 0 5px;
+            @media(max-width: $small-break){
+                text-align: center;
+                margin: 0;
+            }
         }
-        ul{
+        ul.menu{
+            &.open{
+                transform: translate(-100vw)
+            }
            @media(max-width: $small-break){
-            display: none;
+            position: absolute;
+            width: 100%;
+            top: 50px;
+            right: -100vw;
             } 
         }
         
@@ -176,6 +192,7 @@ body{
         }
         p.description{
             padding: $text-padding 0;
+            text-align: center;
         }
         div.email{
             @include button;
