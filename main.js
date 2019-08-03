@@ -3,6 +3,7 @@ const home = () =>{
     showElement('languages')
     showElement('portfolio')
     showElement('contact')
+    //showElement('personalInfo')
     toggleMenu()
 }
 
@@ -11,6 +12,10 @@ const education = () =>{
     hideElement('languages')
     hideElement('portfolio')
     hideElement('contact')
+    if(window.innerWidth <= 600){
+        hideElement('personalInfo')
+        console.log(document.getElementById('personalInfo'))
+    }
     toggleMenu()
 }
 

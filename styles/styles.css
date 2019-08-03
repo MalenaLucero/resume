@@ -273,7 +273,7 @@ body div.portfolio a:hover {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 /*# sourceMappingURL=styles.css.map */
