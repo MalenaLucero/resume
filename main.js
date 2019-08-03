@@ -49,6 +49,9 @@ const hideElement = (elementId) =>{
 }
 
 const toggleMenu = () =>{
-    var menu = document.getElementById('menu')
-    menu.classList.toggle('open')
+    if(window.innerWidth <= 600){
+        var menu = document.getElementById('menu')
+        menu.classList.toggle('open')
+    }
+    
 }
