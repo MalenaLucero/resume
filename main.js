@@ -3,7 +3,7 @@ const home = () =>{
     showElement('languages')
     showElement('portfolio')
     showElement('contact')
-    //showElement('personalInfo')
+    if(window.innerWidth <= 600) showElement('personalInfo')
     toggleMenu()
 }
 
@@ -12,10 +12,7 @@ const education = () =>{
     hideElement('languages')
     hideElement('portfolio')
     hideElement('contact')
-    if(window.innerWidth <= 600){
-        hideElement('personalInfo')
-        console.log(document.getElementById('personalInfo'))
-    }
+    if(window.innerWidth <= 600) hideElement('personalInfo')
     toggleMenu()
 }
 
@@ -24,6 +21,7 @@ const languages = () =>{
     hideElement('education')
     hideElement('portfolio')
     hideElement('contact')
+    if(window.innerWidth <= 600) hideElement('personalInfo')
     toggleMenu()
 }
 
@@ -32,6 +30,7 @@ const portfolio = () =>{
     hideElement('languages')
     hideElement('education')
     hideElement('contact')
+    if(window.innerWidth <= 600) hideElement('personalInfo')
     toggleMenu()
 }
 
@@ -40,6 +39,7 @@ const contact = () =>{
     hideElement('languages')
     hideElement('portfolio')
     hideElement('education')
+    if(window.innerWidth <= 600) hideElement('personalInfo')
     toggleMenu()
 }
 
@@ -58,5 +58,4 @@ const toggleMenu = () =>{
         var menu = document.getElementById('menu')
         menu.classList.toggle('open')
     }
-    
 }

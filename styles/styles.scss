@@ -113,9 +113,10 @@ body{
         flex-direction: column;
         margin: $padding;
         height: auto;
+        min-height: 100vh;
         overflow: scroll;
     }
-    nav{
+    nav.mainMenu{
         position: relative;
         div.dropdown{
             display: none;
@@ -142,9 +143,11 @@ body{
         }
         ul.menu{
             &.open{
-                transform: translate(-100vw)
+                display: block;
+                transform: translate(-100vw);
             }
            @media(max-width: $small-break){
+            display: none;   
             position: absolute;
             width: 100%;
             top: 50px;
@@ -201,12 +204,19 @@ body{
             text-align: center;
             border-radius: 10px;
         }
-        ul.socialMedia{
+        nav.socialMediaNav{
+            display: flex;
+            justify-content: center;
+            ul.socialMedia{
             margin: $text-padding 0;
             display: flex;
-            li{
-                color: white;
-                margin: 0 5px;
+                li{
+                    color: white;
+                    margin: 0 5px;
+                    a{
+                        @include button;
+                    }
+                }
             }
         }
     }

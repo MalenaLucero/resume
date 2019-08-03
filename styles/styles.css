@@ -34,49 +34,52 @@ body {
     flex-direction: column;
     margin: 40px;
     height: auto;
+    min-height: 100vh;
     overflow: scroll;
   }
 }
-body nav {
+body nav.mainMenu {
   position: relative;
 }
-body nav div.dropdown {
+body nav.mainMenu div.dropdown {
   display: none;
   background-color: #096386;
   text-align: center;
 }
 @media (max-width: 600px) {
-  body nav div.dropdown {
+  body nav.mainMenu div.dropdown {
     display: block;
   }
 }
-body nav div.dropdown i {
+body nav.mainMenu div.dropdown i {
   color: #0c084c;
   font-size: 20px;
   background-color: #096386;
   padding: 20px;
 }
-body nav a {
+body nav.mainMenu a {
   background-color: #096386;
   padding: 10px;
   color: white;
   display: block;
   margin: 0 0 5px;
 }
-body nav a:hover {
+body nav.mainMenu a:hover {
   background-color: #0c084c;
 }
 @media (max-width: 600px) {
-  body nav a {
+  body nav.mainMenu a {
     text-align: center;
     margin: 0;
   }
 }
-body nav ul.menu.open {
+body nav.mainMenu ul.menu.open {
+  display: block;
   transform: translate(-100vw);
 }
 @media (max-width: 600px) {
-  body nav ul.menu {
+  body nav.mainMenu ul.menu {
+    display: none;
     position: absolute;
     width: 100%;
     top: 50px;
@@ -145,13 +148,25 @@ body div.personalInfo div.email {
 body div.personalInfo div.email:hover {
   background-color: #0c084c;
 }
-body div.personalInfo ul.socialMedia {
+body div.personalInfo nav.socialMediaNav {
+  display: flex;
+  justify-content: center;
+}
+body div.personalInfo nav.socialMediaNav ul.socialMedia {
   margin: 20px 0;
   display: flex;
 }
-body div.personalInfo ul.socialMedia li {
+body div.personalInfo nav.socialMediaNav ul.socialMedia li {
   color: white;
   margin: 0 5px;
+}
+body div.personalInfo nav.socialMediaNav ul.socialMedia li a {
+  background-color: #096386;
+  padding: 10px;
+  color: white;
+}
+body div.personalInfo nav.socialMediaNav ul.socialMedia li a:hover {
+  background-color: #0c084c;
 }
 body div.resume h2 {
   color: #0c084c;
