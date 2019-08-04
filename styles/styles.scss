@@ -111,7 +111,7 @@ body{
     @media(max-width: $small-break){
         display: flex;
         flex-direction: column;
-        margin: $padding;
+        margin: 15px;
         height: auto;
         min-height: 100vh;
         overflow: scroll;
@@ -261,8 +261,12 @@ body{
         }
     }
     div.portfolio{
+        @include list;
         a{
             @include simpleButton();
+        }
+        li{
+            margin-top: $text-padding;
         }
     }
 }
