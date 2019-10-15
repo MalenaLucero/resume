@@ -267,6 +267,9 @@ body{
         }
         li{
             margin-top: $text-padding;
+            a.codeAnchor{
+                color: $dark-color;
+            }
         }
     }
 }

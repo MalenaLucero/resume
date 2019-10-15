@@ -291,6 +291,9 @@ body div.portfolio a:hover {
 body div.portfolio li {
   margin-top: 20px;
 }
+body div.portfolio li a.codeAnchor {
+  color: #0c084c;
+}
 
 .show {
   display: block;
